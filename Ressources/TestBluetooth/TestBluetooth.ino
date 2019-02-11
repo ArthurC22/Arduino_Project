@@ -50,7 +50,7 @@ void loop() {
 // Initialisation de la communication serie avec l'ordinateur
 
 void InitCommunicationSerie() {
-  Serial.begin(9600);    
+  Serial.begin(38400);    
   while (!Serial) {
   }
   Serial.println("Demarrage connexion serie : Ok");
@@ -58,7 +58,7 @@ void InitCommunicationSerie() {
 
 
 void InitCommunicationBluetoothSerie() {
-  BTSerie.begin(9600);  //9600 den mode normal / 38400 en mode commande
+  BTSerie.begin(38400);  //9600 en mode normal / 38400 en mode commande
   while (!BTSerie) {
       Serial.println("Attente reponse bluetooth");
   }
